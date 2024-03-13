@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Builder</title>
+    <!-- Bootstrap css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <!-- font-awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- slik slider css -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+    <!-- Css link -->
+
+    <!-- animation css cdn-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <!-- navbar start -->
+    <div class="container-fluid">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg ">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#"><img src="image/logo.png" alt="" class="w-75"></a>
+
+                    <div class="collapse navbar-collapse ml-auto" id="navbarSupportedContent">
+                        <ul class="navbar-nav ml-auto mb-2 mb-lg-0 mobile-view">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">
+                                    <span class="iconborder rounded p-2 d-flex">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15"
+                                            fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd"
+                                                d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"
+                                                fill="#f69434" />
+                                        </svg>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <span class="iconborder rounded p-2 d-flex">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15"
+                                            fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
+                                            <path
+                                                d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z"
+                                                fill="#f69434" />
+                                        </svg>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link disabled">
+                                    <span class="iconborder rounded p-2 d-flex">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15"
+                                            fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
+                                            <path
+                                                d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"
+                                                fill="#f69434" />
+                                        </svg>
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Banner section -->
+    <div class="container-fluid background-img d-flex align-items-center justify-content-center">
+        <center>
+            <h2 class="p-2 ">
+                Alcove New Kolkata <br /> The Ultimate in Serampore Luxury Living
+            </h2>
+        </center>
+    </div>
+
+    <div class="container-fliud my-4" data-aos="fade-in">
+        <div class="container">
+            <h2 class="text-center heading-sty">
+                "Amenities and Facilities: <br />Discover the Best of Alcove New Kolkata"
+            </h2>
+            <center>
+                <span class="choose p-relative "></span>
+            </center>
+            <p class="text-center my-4">
+                We believe in providing our residents with the best possible living experience,
+                which is why we have gone to great lengths to design a variety of amenities and
+                facilities that will make your life here comfortable and convenient.
+
+            </p>
+            <div class="row d-flex justify-content-center" data-aos="slide-up">
+                <div class="col-xl-3 col-xxl-3 xol-md-3 col-sm-10 my-4">
+                    <div class="box-styling p-4 rounded">
+                        <center>
+
+                            <span class="icon-style">
+                                <i class="fa-solid fa-person-swimming"></i>
+                            </span>
+                        </center>
+                        <h5 class="text-center my-2">
+                            Swimming Pool
+                        </h5>
+                        <p class="my-2">
+                            Spend a relaxing weekend with your kids, or simply plunge
+                            into the cold waters after a hard work week.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-xxl-3 col-md-3 col-sm-10 my-4">
+                    <div class="box-styling p-4 rounded">
+                        <center>
+                            <span class="icon-style">
+                                <i class="fa-brands fa-servicestack"></i>
+                            </span>
+
+                        </center>
+                        <h5 class="text-center my-2">
+                            Private Jetty & Ferry Service
+                        </h5>
+                        <p class="my-2">
+                            Everyday commuting is made serene &
+                            convenient with New Kolkata’s own private jetty and ferry service.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-xxl-3 col-md-3 col-sm-10 my-4">
+                    <div class="box-styling p-4 rounded">
+                        <center>
+                            <span class="icon-style">
+                                <i class="fa-solid fa-dumbbell"></i>
+                            </span>
+
+                        </center>
+                        <h5 class="text-center my-2">
+                            Hi-tech Multi Gym
+                        </h5>
+                        <p class="my-2">
+                            Keep pushing yourself to a healthier lifestyle while
+                            saving time and money.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-xxl-3 col-md-3 col-sm-10 my-4">
+                    <div class="box-styling p-4 rounded">
+                        <center>
+                            <span class="icon-style">
+                                <i class="fa-solid fa-shop"></i>
+                            </span>
+
+                        </center>
+                        <h5 class="text-center my-2">
+                            Community Hall
+                        </h5>
+                        <p class="my-2">
+                            Discover an opportunity for individuals to connect with
+                            each other, build relationships, and foster a sense of community
+                        </p>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-xxl-3 col-md-3 col-sm-10 my-4">
+                    <div class="box-styling p-4 rounded">
+                        <center>
+                            <span class="icon-style">
+                                <i class="fa-solid fa-file-video"></i>
+                            </span>
+
+                        </center>
+                        <h5 class="text-center my-2">
+                            Mini Theatre
+                        </h5>
+                        <p class="my-2">
+                            Enjoy a movie weekend in a comfortable and immersive
+                            environment, Surely your go-to space for entertainment.
+
+                        </p>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-xxl-3 col-md-3 col-sm-10 my-4">
+                    <div class="box-styling p-4 rounded">
+                        <center>
+                            <span class="icon-style">
+                                <i class="fa-solid fa-gamepad"></i>
+                            </span>
+
+                        </center>
+                        <h5 class="text-center my-2">
+                            AC Indoor Games Arena
+                        </h5>
+                        <p class="my-2">
+                            A fun way to stay active and fit without having to
+                            leave the building (Pool table, table tennis, carrom, chess, dart, and many more).
+
+                        </p>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-xxl-3 col-md-3 col-sm-10 my-4">
+                    <div class="box-styling p-4 rounded">
+                        <center>
+                            <span class="icon-style">
+                                <i class="fa-solid fa-person"></i>
+                            </span>
+
+                        </center>
+                        <h5 class="text-center my-2">
+                            Outdoor meditation & yoga Space
+                        </h5>
+                        <p class="my-2">
+                            Focus on your inner self and achieve a
+                            sense of peace, Practice Yoga with a scenic view of the Ganges every day.
+
+                        </p>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-xxl-3 col-md-3 col-sm-10 my-4">
+                    <div class="box-styling p-4 rounded">
+                        <center>
+                            <span class="icon-style">
+                                <i class="fa-solid fa-person-hiking"></i>
+                            </span>
+
+                        </center>
+                        <h5 class="text-center my-2">
+                            Outdoor Amphitheatre-
+                        </h5>
+                        <p class="my-2">
+                            Experience the best of cultural events in an open-air
+                            setting and a spacious layout right in your community
+
+                        </p>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-xxl-3 col-md-3 col-sm-10 my-4">
+                    <div class="box-styling p-4 rounded">
+                        <center>
+                            <span class="icon-style">
+                                <i class="fa-solid fa-children"></i>
+                            </span>
+
+                        </center>
+                        <h5 class="text-center my-2">
+                            Children’s Play Area
+                        </h5>
+                        <p class="my-2">
+                            A fun space for children to play and enjoy themselves,
+                            which can be a great way to keep them entertained and active.
+
+                        </p>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-xxl-3 col-md-3 col-sm-10 my-4">
+                    <div class="box-styling p-4 rounded">
+                        <center>
+                            <span class="icon-style">
+                                <i class="fa-solid fa-person-walking"></i>
+                            </span>
+
+                        </center>
+                        <h5 class="text-center my-2">
+                            Jogging Track / Walkways
+                        </h5>
+                        <p class="my-2">
+                            A designated space for residents to walk, jog,
+                            run, or bike to help them maintain an active and healthy lifestyle.
+
+
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- CHOOSE LUXURY section -->
+    <div class="container-fluid my-4 bg-light p-4">
+        <div class="container">
+            <h3 class="text-center heading-sty" data-aos="fade-in">
+                CHOOSE LUXURY LIVING AT AFFORDABLE PRICE
+            </h3>
+            <center>
+                <span class="choose p-relative "></span>
+            </center>
+            <div class="row my-4" data-aos="flip-right">
+                <div class="col-xl-4 col-xxl-4 col-md-4 col-sm-10 my-2">
+                    <div class="box-sty p-3 rounded border">
+                        <div>
+                            <img src="image/esp-1650.png" alt="" class="w-100 rounded">
+                        </div>
+                        <h5 class="my-2 text-center">Sangam Serenity</h5>
+                        <p class="my-2 text-center">
+                            Live amidst the green by the Ganges!
+                        </p>
+                        &emsp;
+                        <div class="row">
+                            <div class="col-6 d-flex justify-content-center align-items-center flex-column">
+                                <span class="icon-styl">
+                                    <i class="fa-regular fa-building"></i>
+                                </span>
+                                <p>2/3-BHK</p>
+                            </div>
+                            <div class="col-6 d-flex justify-content-center align-items-center flex-column ">
+                                <span class="icon-styl ">
+                                    <i class="fa-solid fa-money-bill-wave"></i>
+                                </span>
+                                <p>32.76 Lakhs</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-xxl-4 col-md-4 col-sm-10 my-2">
+                    <div class="box-sty p-3 rounded border">
+                        <div>
+                            <img src="image/esp-1656.png" alt="" class="w-100 rounded">
+                        </div>
+                        <h5 class="my-2 text-center">Sangam Suites</h5>
+                        <p class="my-2 text-center">
+                            Bigger homes for those who like to live freely!
+                        </p>
+                        <div class="row">
+                            <div class="col-6 d-flex justify-content-center align-items-center flex-column">
+                                <span class="icon-styl">
+                                    <i class="fa-regular fa-building"></i>
+                                </span>
+                                <p>3/4-BHK</p>
+                            </div>
+                            <div class="col-6 d-flex justify-content-center align-items-center flex-column ">
+                                <span class="icon-styl ">
+                                    <i class="fa-solid fa-money-bill-wave"></i>
+                                </span>
+                                <p>58.80 Lakhs</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-xxl-4 col-md-4 col-sm-10 my-2">
+                    <div class="box-sty p-3 rounded border">
+                        <div>
+                            <img src="image/esp-1670.png" alt="" class="w-100 rounded">
+                        </div>
+                        <h5 class="my-2 text-center">Sangam Signature</h5>
+                        <p class="my-2 text-center">
+                            Homes closest to the Ganga, where the breathtaking views soothe your soul!
+                        </p>
+                        <div class="row">
+                            <div class="col-6 d-flex justify-content-center align-items-center flex-column">
+                                <span class="icon-styl">
+                                    <i class="fa-regular fa-building"></i>
+                                </span>
+                                <p>2/3-BHK</p>
+                            </div>
+                            <div class="col-6 d-flex justify-content-center align-items-center flex-column ">
+                                <span class="icon-styl ">
+                                    <i class="fa-solid fa-money-bill-wave"></i>
+                                </span>
+                                <p>39.15 Lakhs</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- LOCATION MATTERS section -->
+    <div class="container-fluid my-4">
+        <div class="container">
+            <h3 class="text-center heading-sty" data-aos="fade-in">
+                LOCATION MATTERS: WHY <br />ALCOVE NEW KOLKATA IS
+                THE PERFECT CHOICE
+            </h3>
+            <center>
+                <span class="choose p-relative "></span>
+            </center>
+            <p class="text-center my-4" data-aos="fade-in">
+                Find The Main Entry Gate On G.T. Road <br />
+                1.9km Rishra and 2.6km Serampore Station <br />
+                Reach Dakshineshwar Metro Through The Private Jetty With Ferry Service
+            </p>
+            <div class="row " data-aos="slide-up">
+                <div class="col-xl-8 col-xxl-8 col-md-8 col-sm-10" >
+                    <div class="map-sty">
+                        <img src="image/new_map-scaled-1.png" alt="" class="w-100">
+                    </div>
+                </div>
+                <div class="col-xl-4 col-xxl-4 col-md-4 col-sm-10">
+                    <div class="row box-main p-2">
+                        <div class="img-ico ">
+                            <center>
+                                <img src="image/metro.png" alt="">
+                            </center>
+                            <h5 class="text-center my-2">Nearest Railway Station</h5>
+                        </div>
+
+                        <ul class="sty-sub text-center">
+                            <li>Rishra Railway Station - 1.8kms,</li>
+                            <li>Serampore Railway Station - 2.6kms,</li>
+                            <li>Howrah Station - 18.9kms,</li>
+                            <li>Sealdah Station - 23kms</li>
+                        </ul>
+
+
+                    </div>
+
+
+                    <div class="row box-main my-3 p-2">
+                        <div class="img-ico ">
+                            <center>
+                                <img src="image/train.png" alt="">
+                            </center>
+                            <h5 class="text-center my-2">Nearest Metro</h5>
+                        </div>
+                        <ul class="sty-sub text-center">
+                            <li>Dakshineshwar Metro - 13.9kms</li>
+                        </ul>
+
+                    </div>
+
+                    <div class="row box-main my-3 p-2">
+                        <div class="img-ico ">
+                            <center>
+                                <img src="image/aeroplane.png" alt="">
+                            </center>
+                            <h5 class="text-center my-2">Nearest Airport</h5>
+                        </div>
+                        <ul class="sty-sub text-center">
+                            <li>Airport - 21.4kms</li>
+                        </ul>
+                    </div>
+
+
+                    <div class="row box-main my-3 p-2">
+                        <div class="img-ico ">
+                            <center>
+                                <img src="image/road.png" alt="">
+                            </center>
+                            <h5 class="text-center my-2">Road Map</h5>
+                        </div>
+                        <ul class="sty-sub text-center">
+                            <li>New Town - 45 mins drive to,</li>
+                            <li>Esplanade - 22.1kms,</li>
+                            <li>Sector V - 27.3kms,</li>
+                            <li>Dakshineshwar - 11.8kms</li>
+                        </ul>
+                    </div>
+
+                    <div class="row box-main my-3 p-2">
+                        <div class="img-ico ">
+                            <center>
+                                <img src="image/ferry.png" alt="">
+                            </center>
+                            <h5 class="text-center my-2">Ferry</h5>
+                        </div>
+                        <ul class="sty-sub text-center">
+                            <li>Dakshineshwar</li>
+                            <li>Millenium Ghat</li>
+                            <li>Private Hire ( T&C apply )</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- advantage section -->
+    <div class="container-fluid my-4 p-4 bg-light">
+        <div class="continer">
+            <h3 class="text-center heading-sty" data-aos="fade-in">
+                The Alcove Advantage: What <br />Sets Us Apart from the Competition
+            </h3>
+            <center>
+                <span class="choose p-relative "></span>
+            </center>
+            <div class="row my-4" data-aos="slide-up">
+                <div class="col-xl-6 col-xxl-6 col-md-6 col-sm-10 my-2 ">
+                    <div class="aminities p-4">
+                        <span class="icon-style">
+                            <center>
+                                <i class="fa-solid fa-globe"></i>
+                            </center>
+                        </span>
+                        <h5 class="text-center my-2">World Class Amenities</h5>
+                        <p class="text-center">
+                            With the largest clubhouse in Hooghly spanning over 56,000 sq. ft., we set
+                            ourselves apart from the competition in terms of the lifestyle benefits you get
+                            with Alcove.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-xxl-6 col-md-6 col-sm-10 my-2 ">
+                    <div class="aminities p-4">
+                        <span class="icon-style">
+                            <center>
+                                <i class="fa-solid fa-house-user"></i>
+                            </center>
+                        </span>
+                        <h5 class="text-center my-2">Spacious Homes</h5>
+                        <p class="text-center">
+                            Alcove’s apartments come with extra space within this segment to help you and
+                            your family live to their fullest and nurture their dreams.
+                        </p>
+                        &nbsp;
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quality and Value section -->
+
+    <div class="container-fluid my-4 p-4 ">
+        <div class="continer">
+            <h3 class="text-center heading-sty" data-aos="fade-in">
+                Quality and Value: Our <br />Promise to You at Alcove New Kolkata
+            </h3>
+            <center>
+                <span class="choose p-relative "></span>
+            </center>
+            <div class="row my-4" data-aos="slide-up" >
+                <div class="col-xl-6 col-xxl-6 col-md-6 col-sm-10 my-2 ">
+                    <div class="aminities p-4">
+                        <span class="icon-style">
+                            <center>
+                                <i class="fa-solid fa-thumbs-up"></i>
+                            </center>
+                        </span>
+                        <h5 class="text-center my-2">Quality Assurance</h5>
+                        <p class="text-center">
+                            Alcove’s New Kolkata is designed as per the innovative approach of Padma
+                            Bhushan Awardee Architect, “Hafeez Contractor” that vouches for the quality
+                            we deliver
+                        </p>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-xxl-6 col-md-6 col-sm-10 my-2 ">
+                    <div class="aminities p-4">
+                        <span class="icon-style">
+                            <center>
+                                <i class="fa-brands fa-centos"></i>
+                            </center>
+                        </span>
+                        <h5 class="text-center my-2">Value System</h5>
+                        <p class="text-center">
+                            We are motivated to promote sustainable living for our residents with the
+                            Platinum-Rated Green Building on the banks of the Ganga.
+                        </p>
+                        &nbsp;
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Experience Elevated section -->
+    <div class="container-fluid my-4 p-4 bg-light ">
+        <div class="continer">
+            <h3 class="text-center heading-sty" data-aos="fade-in">
+                Experience Elevated Living: <br />Our Commitment to Your Comfort and
+                Convenience
+            </h3>
+            <center>
+                <span class="choose p-relative "></span>
+            </center>
+            <div class="row my-4" data-aos="slide-up">
+                <div class="col-xl-4 col-xxl-4 col-md-4 col-sm-10 my-2  ">
+                    <div class="aminities p-4">
+                        <span class="icon-style">
+                            <center>
+                                <i class="fa-solid fa-bed-pulse"></i>
+                            </center>
+                        </span>
+                        <h5 class="text-center my-2">Comfortable Living</h5>
+                        <p class="text-center">
+                            Alcove’s modern apartments are designed to help you live to your fullest with
+                            utmost comfort & convenience.
+                        </p>
+                        &nbsp;
+                    </div>
+                </div>
+                <div class="col-xl-4 col-xxl-4 col-md-4 col-sm-10 my-2 ">
+                    <div class="aminities p-4">
+                        <span class="icon-style">
+                            <center>
+                                <i class="fa-solid fa-hat-cowboy"></i>
+                            </center>
+                        </span>
+                        <h5 class="text-center my-2">Serene Lifestyle</h5>
+                        <p class="text-center">
+                            In addition to a modern lifestyle, what you will experience at New Kolkata is
+                            serenity in the lap of nature.
+                        </p>
+                        &nbsp;
+                    </div>
+
+                </div>
+                <div class="col-xl-4 col-xxl-4 col-md-4 col-sm-10 my-2 ">
+                    <div class="aminities p-4">
+                        <span class="icon-style">
+                            <center>
+                                <i class="fa-solid fa-signal"></i>
+                            </center>
+                        </span>
+                        <h5 class="text-center my-2">Connectivity</h5>
+                        <p class="text-center">
+                            Although being on the outskirts of Kolkata, Alcove’s New Kolkata is
+                            well-connected by road, railway and water
+                        </p>
+                        &nbsp;
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Why Choose Alcove New Kolkata section -->
+
+    <div class="container-fluid my-4 p-4 ">
+        <div class="continer">
+            <h3 class="text-center heading-sty" data-aos="fade-in">
+                Why Choose Alcove New Kolkata:<br /> A Comprehensive Guide to Our
+                Offerings
+            </h3>
+            <center>
+                <span class="choose p-relative "></span>
+            </center>
+            <div class="row my-4" data-aos="slide-up">
+                <div class="col-xl-3 col-xxl-3 col-md-3 col-sm-10 my-2 ">
+                    <div class="aminities p-4">
+                        <span class="icon-style">
+                            <center>
+                                <i class="fa-solid fa-hat-cowboy"></i>
+                            </center>
+                        </span>
+                        <h5 class="text-center my-2">Affordable Luxury</h5>
+                        <p class="text-center">
+                            With the mission to provide a luxury living experience, we promote
+                            affordability in our homes.
+                        </p>
+                        &nbsp;
+                    </div>
+                </div>
+                <div class="col-xl-3 col-xxl-3 col-md-3 col-sm-10 my-2 ">
+                    <div class="aminities p-4">
+                        <span class="icon-style">
+                            <center>
+                                <i class="fa-solid fa-water"></i>
+                            </center>
+                        </span>
+                        <h5 class="text-center my-2">Open Green Space</h5>
+                        <p class="text-center">
+                            Spanning the rich fertile banks of Ganga, New Kolkata boasts open spaces
+                            covered with lush green vegetation.
+                        </p>
+                        &nbsp;
+                    </div>
+
+                </div>
+                <div class="col-xl-3 col-xxl-3 col-md-3 col-sm-10 my-2 ">
+                    <div class="aminities p-4">
+                        <span class="icon-style">
+                            <center>
+                                <i class="fa-solid fa-water"></i>
+                            </center>
+                        </span>
+                        <h5 class="text-center my-2">Ganga Riverfront</h5>
+                        <p class="text-center">
+                            Panoramic views of Ganga Riverfront and a Private Ghat for a tranquil
+                            experience of the Ganges.
+
+                        </p>
+                        &nbsp;
+                    </div>
+                </div>
+                <div class="col-xl-3 col-xxl-3 col-md-3 col-sm-10 my-2 ">
+                    <div class="aminities p-4">
+                        <center>
+                            <span class="icon-style">
+                                <i class="fa-brands fa-servicestack"></i>
+                            </span>
+                        </center>
+                        <h5 class="text-center my-2">Private Ferry & Jetty</h5>
+                        <p class="text-center">
+                            Dedicated private ferry & jetty services for increased connectivity
+                        </p>
+                        &nbsp;<br />
+                        &nbsp;
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Testimonials and Reviews section -->
+    <!-- <div class="container-fluid">
+        <div class="container">
+            <div class="row autoplay">
+                    <div class="col-4">your content</div>
+                    <div class="col-4">your content</div>
+                    <div class="col-4">your content</div>
+                    <div class="col-4">your content</div>
+                    <div class="col-4">your content</div>
+                    <div class="col-4">your content</div>
+            </div>
+        </div>
+    </div> -->
+
+
+    <!-- Footer section -->
+
+    <div class="container-fluid mt-4 footer-bg p-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-3 col-xxl-3 col-md-3 col-sm-10">
+                    <div>
+                        <img src="image/logo.png" alt="" class="w-100">
+                        <p class="text-light">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis placeat quasi aut ut
+                            culpa odit sit, nihil deleniti id dignissimos!
+                        </p>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-xxl-3 col-md-3 col-sm-10">
+                    <div>
+                        <ul class="text-light footerli">
+                            <li>About us</li>
+                            <li>Contact us</li>
+                            <li>Blogs</li>
+                            <li>Gallery</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-xxl-3 col-md-3 col-sm-10">
+                    <div>
+                        <ul class="text-light footerli">
+                            <li>Residences</li>
+                            <li>Specifications</li>
+                            <li>Facilities</li>
+                            <li>Locations</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-xxl-3 col-md-3 col-sm-10">
+                    <div>
+                        <h5 class="text-light">Follow me</h5>
+                    </div>
+                    <ul class="text-light footerli d-flex gap-3">
+                        <li>
+                            <span>
+                                <i class="fa-brands fa-facebook"></i>
+                            </span>
+                        </li>
+                        <li>
+                            <span>
+                                <i class="fa-brands fa-instagram"></i>
+                            </span>
+                        </li>
+                        <li>
+                            <span>
+                                <i class="fa-brands fa-twitter"></i>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid footer-bg p-4">
+        <hr class="text-light" />
+        <center>
+            <p class="text-light">
+                © 2023. All Copy-rights reserved By - <span class="heading-sty"><strong>Alcove New
+                        Kolkata</strong></span>
+            </p>
+        </center>
+    </div>
+    <!-- Boostrap js -->
+
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous"> -->
+
+    <!-- font-awesome js cdn -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/js/fontawesome.min.js"
+        integrity="sha512-36dJpwdEm9DCm3k6J0NZCbjf8iVMEP/uytbvaiOKECYnbCaGODuR4HSj9JFPpUqY98lc2Dpn7LpyPsuadLvTyw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- slik slider js -->
+    <!-- <script src="jquery-3.6.3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script type="text/javascript">
+   $('.autoplay').slick({
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 2000,
+});
+				
+
+</script> -->
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+AOS.init({
+    offset:120,
+    duration:1000
+});
+</script>
+</body>
+
+</html>
