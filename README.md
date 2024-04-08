@@ -18,9 +18,6 @@ You can view a live demo of the landing page here https://home-builder-nine.verc
 ### Desktop View
 <img width="960" alt="image" src="image/screencapture.png">
 
-### Tablet View
-<img width="572" alt="image" src="image/tablet.png">
-
 ### Mobile View
 <img width="281" alt="image" src="image/mobile.png">
 
